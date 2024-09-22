@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stylized_title {
+    color: #2800FF;
+    font-family: "HK Grotesk", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 105%;
+    margin: 0;
+    text-align: center;
+}
