@@ -29,7 +29,7 @@ let saveUserForm = (event) => {
 
 
 function showStoredEntries() {
-    let table_body = document.getElementById('entriesTable').getElementsByTagName('tbody')[0]
+    let table_body = document.getElementById('entries').getElementsByTagName('tbody')[0]
 
     table_body.innerHTML = ''
     JSON.parse(localStorage.getItem('user-entries')).forEach(item => {
