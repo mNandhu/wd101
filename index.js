@@ -40,7 +40,7 @@ function showStoredEntries() {
 }
 
 let userForm = document.getElementById('registerForm')
-let userEntries = localStorage.getItem('user-entries')
+let userEntries = JSON.parse(localStorage.getItem('user-entries'))
 
 if (!userEntries) {
     userEntries = [];
