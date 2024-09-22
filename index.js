@@ -11,9 +11,6 @@ dateInput.setAttribute('min', getCurrentDateMinusNYears(55));
 dateInput.setAttribute('max', getCurrentDateMinusNYears(18));
 
 
-let userForm = document.getElementById('registerForm')
-let userEntries = [];
-
 let saveUserForm = (event) => {
     event.preventDefault();
     const name = document.getElementById('name').value;
@@ -40,6 +37,15 @@ function showStoredEntries() {
         const cells = fields.map(field => `<td class="">${item[field]}</td>`).join('');
         table_body.innerHTML += `<tr class="text-center">${cells}</tr>`;
     })
+}
+
+let userForm = document.getElementById('registerForm')
+let userEntries = localStorage.getItem('user-entries')
+
+if (!userEntries) {
+    userEntries = [];
+} else {
+    showStoredEntries()
 }
 
 userForm.addEventListener('submit', saveUserForm)
